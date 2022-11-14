@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <img src="https://www.snomed.org/SNOMED/media/SNOMED/other/brand-mark.png" height="60px">
-  <span id="title">Coding demo template</span>
+  <span id="title">Annes demo test</span>
   <span class="example-spacer"></span>
   
   <button mat-raised-button color="accent" [matMenuTriggerFor]="serverMenu">FHIR Server: {{selectedServer.name}}</button>
@@ -20,7 +20,7 @@
   
   <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">{{selectedLanguage}}</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item *ngFor="let language of languages" (click)="setLanguage(language)">{{language}}</button>
+    <button mat-menu-item *ngFor="let language of languages" (click)="setLanguage(language)">lang: {{language}}</button>
   </mat-menu>
 
   <button mat-raised-button color="accent" (click)="this.excelService.exportAsExcelFile(this.bindingsForExport, 'bindings')">

@@ -1,5 +1,5 @@
 <mat-tab-group mat-align-tabs="start">
-    <mat-tab *ngFor="let section of codingSpecService.getCodingSpec()" label="{{section.title}}">
+    <mat-tab *ngFor="let section of codingSpecService.getCodingSpec()" label="Tab: {{section.title}}">
         <h2>{{section.title}}</h2>
         <p>{{ section.description }}</p>
         <app-binding [bindings]="section.bindings"></app-binding>

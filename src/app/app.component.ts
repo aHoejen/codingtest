@@ -13,7 +13,7 @@ export class AppComponent {
   bindingsForExport: any[] = [];
   editions: any[] = [];
   editionsDetails: any[] = [];
-  languages = ['be', 'en', 'es', 'fr', 'no'];
+  languages = ['be', 'en', 'es', 'fr', 'no', 'da'];
   selectedEdition = 'Edition';
   selectedLanguage = 'en';
   fhirServers = [

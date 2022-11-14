@@ -15,7 +15,15 @@ export class DropdownBindingComponent implements OnInit {
   constructor(private terminologyService: TerminologyService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.terminologyService.expandValueSet(this.binding.ecl, '').subscribe(response => this.options = response.expansion.contains)
+    this.terminologyService.expandValueSet(this.binding.ecl, '').subscribe(response => {
+      this.options = response.expansion.contains
+      console.log('subscription done');
+      console.log(this.binding.title);
+      console.log(this.options?.length);
+    })
+    
+    console.log('after subscription');
+    console.log(this.options?.length);
   }
 
   openDialog(): void {
